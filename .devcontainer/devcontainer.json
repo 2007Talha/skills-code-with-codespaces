@@ -1,8 +1,6 @@
 {
-  // Codespaces exercise configuration
   "name": "Basic Dev Environment",
   "image": "mcr.microsoft.com/devcontainers/base:debian",
-  "remoteUser": "vscode",
   "features": {
     "ghcr.io/devcontainers/features/python:1": {
       "installTools": true,

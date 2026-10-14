@@ -1,16 +1,50 @@
 # Code with Codespaces
 
-<img src="https://octodex.github.com/images/Professortocat_v2.png" align="right" height="200px" />
+This repository contains a small Python application and a configured
+development environment for GitHub Codespaces. The configuration provides a
+repeatable setup for contributors and demonstrates how to customize a
+Codespace with a base image, container features, VS Code extensions, and a
+post-create script.
 
-Hey 2007Talha!
+## Getting started
 
-Mona here. I'm done preparing your exercise. Hope you enjoy! 💚
+1. Open the repository on GitHub.
+2. Select **Code**, open the **Codespaces** tab, and create a Codespace on
+   `main`.
+3. Wait for the container to finish building.
+4. Run the application from the Codespaces terminal:
 
-Remember, it's self-paced so feel free to take a break! ☕️
+   ```bash
+   python src/hello.py
+   ```
 
-[![](https://img.shields.io/badge/Go%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/2007Talha/skills-code-with-codespaces/issues/1)
+The program prints:
 
----
+```text
+Hello World!
+```
 
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+## Development environment
 
+The `.devcontainer/devcontainer.json` file configures:
+
+- The Debian-based `mcr.microsoft.com/devcontainers/base` image
+- Python 3.10 with common tools
+- The Microsoft Python and Python Debugger extensions for VS Code
+- A post-create script that installs the `sl` terminal animation
+
+To rebuild the environment after changing the configuration, run
+**Codespaces: Rebuild Container** from the VS Code Command Palette.
+
+## Local development
+
+The application only requires Python:
+
+```bash
+python --version
+python src/hello.py
+```
+
+## License
+
+This project is available under the [MIT License](LICENSE). &bull; [MIT License](https://gh.io/mit)
